@@ -10,43 +10,43 @@
             <div class="row">
                 <div class="input-field col s6">
                     {!! Form::text('nombre', null, ['id' => 'nombre', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('nombre', 'Nombre') !!}
+                    {!! Form::label('nombre', 'Nombre', ['class' => 'active']) !!}
                 </div>
                 <div class="input-field col s6">
                     {!! Form::text('apellido', null, ['id' => 'apellido', 'type' => 'text', 'class' => 'validate', 'requiered'] ) !!}
-                    {!! Form::label('apellido', 'Apellido') !!}
+                    {!! Form::label('apellido', 'Apellido', ['class' => 'active']) !!}
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::password('password', ['id' => 'password', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('password', 'Password') !!}
+                    {!! Form::label('password', 'Password', ['class' => 'active']) !!}
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::email('correo', null, ['id' => 'correo', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('correo', 'Correo') !!}
+                    {!! Form::label('correo', 'Correo', ['class' => 'active']) !!}
                 </div>
             </div>
 
             <div class="row">
                     <div class="input-field col s6">
                         {!! Form::text('dni', null, ['id' => 'dni', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
-                        {!! Form::label('dni', 'DNI') !!}
+                        {!! Form::label('dni', 'DNI', ['class' => 'active']) !!}
                     </div>
                     <div class="input-field col s6">
                         {!! Form::text('celular', null, ['id' => 'celular', 'type' => 'text', 'class' => 'validate', 'requiered'] ) !!}
-                        {!! Form::label('celular', 'Celular') !!}
+                        {!! Form::label('celular', 'Celular', ['class' => 'active']) !!}
                     </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::date('fecha', null, ['class' => 'datepicker']) !!}
-                    {!! Form::label('fecha', 'Fecha de Nacimiento') !!}
+                    {!! Form::label('fecha', 'Fecha de Nacimiento', ['class' => 'active']) !!}
                 </div>
             </div>
 
