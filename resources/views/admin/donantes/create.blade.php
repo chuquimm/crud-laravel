@@ -82,8 +82,8 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    {!! Form::text('ubicacion', null, ['id' => 'ubicacion', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('ubicacion', 'Ubicacion') !!}
+                    {!! Form::text('lugar', null, ['id' => 'lugar', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
+                    {!! Form::label('lugar', 'Ubicacion') !!}
                 </div>
             </div>
 
