@@ -22,4 +22,8 @@ class Donante extends Model
         'foto', 
         'password'
     ];
+
+    protected $hidden = [
+        'password',
+    ];
 }
