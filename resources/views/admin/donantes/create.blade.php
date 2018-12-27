@@ -101,6 +101,18 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col s12 center">
+                    <label>
+                        {!! Form::checkbox("terminos") !!}
+                        <span>Acepto terminos</span>
+                    </label>
+                </div>
+                <div class="col s12 center">
+                    {!! Form::submit('Registrarse', ["class" => "btn-large waves-effect waves-light"]) !!}
+                </div>
+            </div>
+
         {!! Form::close() !!}
     </div>
 @endsection
