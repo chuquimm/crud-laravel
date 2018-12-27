@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset('plugins\materialize\css\materialize.css') }}">
 </head>
 <body>
-
+    @yield('content')
+    
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="plugins\materialize\js\materialize.js"></script>
 </body>
