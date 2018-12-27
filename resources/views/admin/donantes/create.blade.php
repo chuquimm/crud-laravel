@@ -104,7 +104,7 @@
             <div class="row">
                 <div class="col s12 center">
                     <label>
-                        {!! Form::checkbox("terminos") !!}
+                        {!! Form::checkbox("terminos", 1 , null, ['requiered']) !!}
                         <span>Acepto terminos</span>
                     </label>
                 </div>
