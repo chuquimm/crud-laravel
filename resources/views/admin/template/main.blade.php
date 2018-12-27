@@ -17,6 +17,7 @@
     </section>
 
     <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="plugins\jquerry\js\jquery-3.3.1.js"></script>
     <script type="text/javascript" src="plugins\materialize\js\materialize.js"></script>
 </body>
 </html>
