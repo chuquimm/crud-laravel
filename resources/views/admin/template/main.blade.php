@@ -12,7 +12,7 @@
 </head>
 <body>
     @include('admin.template.partials.nav')
-    <section>
+    <section class="container">
         @yield('content')
     </section>
 
