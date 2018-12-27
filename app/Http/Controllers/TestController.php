@@ -10,6 +10,7 @@ class TestController extends Controller
     public function view($id)
     {
         $donante = Donante::find($id);
-        dd($donante);
+
+        return view('welcome', ['prueba' => $donante]);
     }
 }
