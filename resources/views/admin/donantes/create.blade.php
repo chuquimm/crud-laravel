@@ -10,43 +10,43 @@
             <div class="row">
                 <div class="input-field col s6">
                     {!! Form::text('nombre', null, ['id' => 'nombre', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('nombre', 'Nombre', ['class' => 'active']) !!}
+                    {!! Form::label('nombre', 'Nombre') !!}
                 </div>
                 <div class="input-field col s6">
                     {!! Form::text('apellido', null, ['id' => 'apellido', 'type' => 'text', 'class' => 'validate', 'requiered'] ) !!}
-                    {!! Form::label('apellido', 'Apellido', ['class' => 'active']) !!}
+                    {!! Form::label('apellido', 'Apellido') !!}
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::password('password', ['id' => 'password', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('password', 'Password', ['class' => 'active']) !!}
+                    {!! Form::label('password', 'Password') !!}
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::email('correo', null, ['id' => 'correo', 'class' => 'validate', 'requiered']) !!}
-                    {!! Form::label('correo', 'Correo', ['class' => 'active']) !!}
+                    {!! Form::label('correo', 'Correo') !!}
                 </div>
             </div>
 
             <div class="row">
                     <div class="input-field col s6">
                         {!! Form::text('dni', null, ['id' => 'dni', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
-                        {!! Form::label('dni', 'DNI', ['class' => 'active']) !!}
+                        {!! Form::label('dni', 'DNI') !!}
                     </div>
                     <div class="input-field col s6">
                         {!! Form::text('celular', null, ['id' => 'celular', 'type' => 'text', 'class' => 'validate', 'requiered'] ) !!}
-                        {!! Form::label('celular', 'Celular', ['class' => 'active']) !!}
+                        {!! Form::label('celular', 'Celular') !!}
                     </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::date('fecha', null, ['class' => 'datepicker']) !!}
-                    {!! Form::label('fecha', 'Fecha de Nacimiento', ['class' => 'active']) !!}
+                    {!! Form::label('fecha', 'Fecha de Nacimiento') !!}
                 </div>
             </div>
 
@@ -55,10 +55,5 @@
 @endsection
 
 @section('script')
-    <script>
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15 // Creates a dropdown of 15 years to control year
-        });
-    </script>    
+    <script src="{{ asset('js\create.js') }}"></script>   
 @endsection
