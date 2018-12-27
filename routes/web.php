@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Route::group(['prefix'=> 'admin'], function () {
     
-    // Route::resource('donantes', '')
+    Route::resource('donantes', 'DonantesController');
 
 });
