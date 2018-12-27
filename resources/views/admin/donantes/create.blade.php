@@ -46,6 +46,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     {!! Form::date('fecha', null, ['class' => 'datepicker']) !!}
+                    {!! Form::label('fecha', 'Fecha de Nacimiento') !!}
                 </div>
             </div>
 
