@@ -95,7 +95,7 @@
                     <div class="file-field input-field">
                         <div class="btn">
                             <span>Sube tu foto</span>
-                            {!! Form::file('image') !!}
+                            {!! Form::file('foto') !!}
                         </div>
                     </div> 
                 </div>

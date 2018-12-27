@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Donante;
 
 class DonantesController extends Controller
 {
@@ -34,7 +35,10 @@ class DonantesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $donante = new Donante($request->all());
+        $donante->password = $request->password
+        $donante->save();
+        dd("Usuario creado");
     }
 
     /**
