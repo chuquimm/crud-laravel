@@ -50,6 +50,13 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="input-field col s12">
+                    {!! Form::select('genero', ['Masculino' => 'Masculino', 'Femenino' => 'Fememnino']) !!}
+                    {!! Form::label('genero', 'Genero') !!}
+                </div>
+            </div>
+
         {!! Form::close() !!}
     </div>
 @endsection
