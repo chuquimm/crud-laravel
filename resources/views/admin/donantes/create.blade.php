@@ -87,6 +87,20 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col s4 m12 center">
+                    <img src="{{ asset('images\avatar.png') }}" alt="" class="circle responsive-img" width="20%">
+                </div>
+                <div class="col s8 m12 center">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>Sube tu foto</span>
+                            {!! Form::file('image') !!}
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
         {!! Form::close() !!}
     </div>
 @endsection
