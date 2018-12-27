@@ -23,7 +23,7 @@ class DonantesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.donantes.create');
     }
 
     /**
