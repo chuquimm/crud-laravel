@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=> 'donantes'], function () {
-    Route::get('view/{donante?}', function($donante = ""){
-        echo $donante;
-    });
+Route::group(['prefix'=> 'donantes'], function ($id) {
+    Route::get('view/{id}', [
+        'uses'  => 'TestController@view',
+        'as'    => 'DonantesView'
+    ]);
 });
