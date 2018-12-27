@@ -15,10 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('agregar', function () {
-    return view('agregar');
-});
-
-Route::get('lista', function () {
-    return view('lista');
+Route::group(['prefix'=> 'donantes'], function () {
+    Route::get('view/{donante?}', function($donante = ""){
+        echo $donante;
+    });
 });
