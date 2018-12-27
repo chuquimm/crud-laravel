@@ -14,7 +14,8 @@ class DonantesController extends Controller
      */
     public function index()
     {
-        //
+        $donantes = Donante::orderBy('id', 'ASC')->paginate(2);
+        return view('admin.donantes.index')->with('donantes', $donantes);
     }
 
     /**
