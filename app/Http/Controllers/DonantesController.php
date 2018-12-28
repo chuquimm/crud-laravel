@@ -38,7 +38,9 @@ class DonantesController extends Controller
     {
         $donante = new Donante($request->all());
         $donante->save();
-        dd("Usuario creado");
+        
+        $donantes = Donante::orderBy('id', 'ASC')->paginate(2);
+        return view('admin.donantes.index')->with('donantes', $donantes);
     }
 
     /**
