@@ -85,6 +85,7 @@ class DonantesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $donante = Donante::find($id);
+        $donante->delete();
     }
 }

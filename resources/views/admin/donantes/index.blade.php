@@ -25,7 +25,7 @@
                         <td>{{$donante->sangre}}{{$donante->factor}}</td>
                         <td>
                             <a href="" class="btn-floating waves-effect waves-light red"><i class="material-icons">create</i></a>
-                        <a href="{{ route('admin.donantes.destroy', $donante->id) }}" class="btn-floating waves-effect waves-light red"><i class="material-icons">clear</i></a>
+                            <a href="{{ route('admin.donantes.destroy', $donante->id) }}" class="btn-floating waves-effect waves-light red" onclick="return confirm('¿Eliminar?')"><i class="material-icons">clear</i></a>
                         </td>
                     </tr>
                 @endforeach
