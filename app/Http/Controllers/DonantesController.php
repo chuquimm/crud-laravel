@@ -39,8 +39,7 @@ class DonantesController extends Controller
         $donante = new Donante($request->all());
         $donante->save();
         
-        $donantes = Donante::orderBy('id', 'ASC')->paginate(2);
-        return view('admin.donantes.index')->with('donantes', $donantes);
+        return redirect()->route('donantes.index');
     }
 
     /**
@@ -75,7 +74,20 @@ class DonantesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $donante = Donante::find($id);
+        $donante->nombre = $request->nombre;
+        $donante->apellido = $request->apellido;
+        $donante->correo = $request->correo;
+        $donante->dni = $request->dni;
+        $donante->celular = $request->celular;
+        $donante->fecha = $request->fecha;
+        $donante->genero = $request->genero;
+        $donante->sangre = $request->sangre;
+        $donante->factor = $request->factor;
+        $donante->lugar = $request->lugar;
+        $donante->save();
+
+        return redirect()->route('donantes.index');
     }
 
     /**
