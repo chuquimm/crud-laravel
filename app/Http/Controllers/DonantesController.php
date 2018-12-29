@@ -62,7 +62,8 @@ class DonantesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $donante = Donante::find($id);
+        return view('admin.donantes.edit')->with('donante', $donante); 
     }
 
     /**
