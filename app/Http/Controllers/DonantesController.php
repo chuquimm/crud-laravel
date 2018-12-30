@@ -37,7 +37,11 @@ class DonantesController extends Controller
     public function store(Request $request)
     {
         $donante = new Donante($request->all());
-        $donante->foto = $request->file('foto')->store('public');
+
+        if ($request->hasFile('foto')) {
+            $donante->foto = $request->file('foto')->store('public');
+        }
+
         $donante->save();
         
         return redirect()->route('donantes.index');
@@ -78,7 +82,9 @@ class DonantesController extends Controller
         
         $donante = Donante::find($id);
         
-        $donante->foto = $request->file('foto')->store('public');
+        if ($request->hasFile('foto')) {
+            $donante->foto = $request->file('foto')->store('public');
+        }
 
         $donante->nombre = $request->nombre;
         $donante->apellido = $request->apellido;
