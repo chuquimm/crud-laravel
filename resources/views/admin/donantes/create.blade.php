@@ -102,12 +102,12 @@
             </div>
 
             <div class="row">
-                <div class="col s12 center">
+                {{-- <div class="col s12 center">
                     <label>
                         {!! Form::checkbox("terminos", 1 , null, ['requiered']) !!}
                         <span>Acepto terminos</span>
                     </label>
-                </div>
+                </div> --}}
                 <div class="col s12 center">
                     {!! Form::submit('Registrarse', ["class" => "btn-large waves-effect waves-light"]) !!}
                 </div>
