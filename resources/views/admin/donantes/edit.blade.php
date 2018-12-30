@@ -4,7 +4,7 @@
 @section('content')
     <h1>Registro</h1>
     <div class="row">
-        {!! Form::open(['route' => ['donantes.update', $donante->id], 'method' => 'PUT', 'class' => 'col s12']) !!}
+        {!! Form::open(['route' => ['donantes.update', $donante->id], 'method' => 'PUT', 'class' => 'col s12', 'enctype' => 'multipart/form-data']) !!}
             <div class="row">
                 <div class="input-field col s6">
                     {!! Form::text('nombre', $donante->nombre, ['id' => 'nombre', 'type' => 'text', 'class' => 'validate', 'requiered']) !!}
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="input-field col s4">
-                    {!! Form::select('factor', ['+' => '-', '-' => '-']) !!}
+                    {!! Form::select('factor', ['+' => '+', '-' => '-']) !!}
                     {!! Form::label('factor', 'Factor') !!}
                 </div>
 
@@ -80,15 +80,15 @@
 
             <div class="row">
                 <div class="col s4 m12 center">
-                    <img src="{{ asset('images\avatar.png') }}" alt="" class="circle responsive-img" width="20%">
+                    <img src="{{ Storage::url($donante->foto) }}" alt="" class="circle responsive-img" width="20%">
                 </div>
                 <div class="col s8 m12 center">
-                    <div class="file-field input-field">
-                        <div class="btn">
-                            <span>Sube tu foto</span>
+                    {{-- <div class="file-field input-field"> --}}
+                        {{-- <div class="btn"> --}}
+                            {{-- <span>Foto</span> --}}
                             {!! Form::file('foto') !!}
-                        </div>
-                    </div> 
+                        {{-- </div> --}}
+                    {{-- </div> --}}
                 </div>
             </div>
 

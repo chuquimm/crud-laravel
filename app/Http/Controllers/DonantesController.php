@@ -14,7 +14,7 @@ class DonantesController extends Controller
      */
     public function index()
     {
-        $donantes = Donante::orderBy('id', 'ASC')->paginate(2);
+        $donantes = Donante::orderBy('id', 'ASC')->paginate(5);
         return view('admin.donantes.index')->with('donantes', $donantes);
     }
 
@@ -37,6 +37,7 @@ class DonantesController extends Controller
     public function store(Request $request)
     {
         $donante = new Donante($request->all());
+        $donante->foto = $request->file('foto')->store('public');
         $donante->save();
         
         return redirect()->route('donantes.index');
@@ -74,7 +75,11 @@ class DonantesController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         $donante = Donante::find($id);
+        
+        $donante->foto = $request->file('foto')->store('public');
+
         $donante->nombre = $request->nombre;
         $donante->apellido = $request->apellido;
         $donante->correo = $request->correo;
@@ -100,5 +105,6 @@ class DonantesController extends Controller
     {
         $donante = Donante::find($id);
         $donante->delete();
+        return redirect()->route('donantes.index');
     }
 }

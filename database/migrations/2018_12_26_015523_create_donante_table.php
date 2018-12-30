@@ -25,7 +25,7 @@ class CreateDonanteTable extends Migration
             $table->enum('sangre', ['A', 'B', 'AB', 'O', null]);
             $table->enum('factor', ['+', '-', null]);
             $table->string('lugar');
-            $table->string('foto')->default('images\avatar.png');
+            $table->string('foto')->default('avatar.png');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
