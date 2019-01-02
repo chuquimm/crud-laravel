@@ -92,12 +92,21 @@
                     <img src="{{ Storage::url('avatar.png') }}" alt="" class="circle responsive-img" width="20%">
                 </div>
                 <div class="col s8 m12 center">
-                    {{-- <div class="file-field input-field"> --}}
-                        {{-- <div class="btn"> --}}
-                            {{-- <span>Sube tu foto</span> --}}
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" name="foto">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                            </div>
+                    {{-- <div class="file-field input-field">
+                        <div class="btn">
+                            <span>Sube tu foto</span>
                             {!! Form::file('foto') !!}
-                        {{-- </div> --}}
-                    {{-- </div>  --}}
+                        </div>
+                    </div>  --}}
                 </div>
             </div>
 

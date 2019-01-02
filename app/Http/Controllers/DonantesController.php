@@ -38,6 +38,7 @@ class DonantesController extends Controller
     {
         $donante = new Donante($request->all());
 
+        $donante->password = bcrypt($donante->password);
         if ($request->hasFile('foto')) {
             $donante->foto = $request->file('foto')->store('public');
         }
