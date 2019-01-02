@@ -61,18 +61,18 @@
 
             <div class="row">
                 <div class="input-field col s4">
-                    {!! Form::select('sangre', ['A' => 'A', 'B' => 'B', 'AB' => 'AB', 'O' => 'O']) !!}
+                    {!! Form::select('sangre', ['A' => 'A', 'B' => 'B', 'AB' => 'AB', 'O' => 'O'], null, ['placeholder' => 'Sangre', 'id' => 'sangre'])!!}
                     {!! Form::label('sangre', 'Sangre') !!}
                 </div>
 
                 <div class="input-field col s4">
-                    {!! Form::select('factor', ['+' => '+', '-' => '-']) !!}
+                    {!! Form::select('factor', ['+' => '+', '-' => '-'], null, ['placeholder' => 'Factor', 'id' => 'factor']) !!}
                     {!! Form::label('factor', 'Factor') !!}
                 </div>
 
                 <div class="col s4">
                     <label>
-                        {{-- {!! Form::checkbox("desconoce", 'id' => 'desconoce') !!}
+                        {{-- {!! Form::checkbox("desconoce",null, ['id' => 'desconoce']) !!}
                         <span>No conozco mi tipo de sangre</span> --}}
                         <input type="checkbox" id="checkSangre" />
                         <span>No conozco mi tipo de sangre</span>
