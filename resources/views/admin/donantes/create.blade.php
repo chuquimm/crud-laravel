@@ -72,10 +72,10 @@
 
                 <div class="col s4">
                     <label>
-                        {{-- <input type="checkbox"> --}}
-                        {!! Form::checkbox("desconoce") !!}
+                        {{-- {!! Form::checkbox("desconoce", 'id' => 'desconoce') !!}
+                        <span>No conozco mi tipo de sangre</span> --}}
+                        <input type="checkbox" id="checkSangre" />
                         <span>No conozco mi tipo de sangre</span>
-                        {{-- {!! Form::label("desconoce", "Label") !!} --}}
                     </label>
                 </div>
             </div>
